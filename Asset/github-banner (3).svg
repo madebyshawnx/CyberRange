@@ -1,0 +1,297 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bannerTitle bannerDesc">
+  <title id="bannerTitle">Welcome to my GitHub - Shawn Thomas, product manager working across security and cloud engineering</title>
+  <desc id="bannerDesc">A dark banner with a monospace eyebrow reading security, cloud and AI, a left-aligned name, and a role line reading product management, cybersecurity and cloud engineering, over a subtle grid with ambient blue glow, network traces, a shield ringed by an orbit of region nodes, and an animated terminal card that runs through prioritizing, threat modeling, enforcing least privilege, and shipping.</desc>
+
+  <defs>
+    <!-- ============ PALETTE ============
+         ink        #030712  base background
+         deep       #071426  mid background
+         signal     #35a7ff  primary blue
+         mint       #48f5d2  security accent
+         ember      #ff9d6b  cloud accent (used sparingly)
+         paper      #e6f8ff  headline text
+         muted      #a9bed0  supporting text
+    ================================== -->
+
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030712"/>
+      <stop offset="0.5" stop-color="#071426"/>
+      <stop offset="1" stop-color="#02040a"/>
+    </linearGradient>
+
+    <radialGradient id="blueGlow" cx="0.66" cy="0.48" r="0.62">
+      <stop offset="0" stop-color="#1aa7ff" stop-opacity="0.28"/>
+      <stop offset="0.4" stop-color="#1687d9" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#1687d9" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="leftGlow" cx="0.16" cy="0.4" r="0.46">
+      <stop offset="0" stop-color="#48f5d2" stop-opacity="0.15"/>
+      <stop offset="0.52" stop-color="#48f5d2" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#48f5d2" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="headline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.68" stop-color="#e6f8ff"/>
+      <stop offset="1" stop-color="#89e9ff"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#48f5d2"/>
+      <stop offset="1" stop-color="#35a7ff"/>
+    </linearGradient>
+
+    <linearGradient id="emberAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9d6b"/>
+      <stop offset="1" stop-color="#ffd7a8"/>
+    </linearGradient>
+
+    <linearGradient id="terminalSweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#74dfff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#74dfff" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#74dfff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="progressFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#48f5d2"/>
+      <stop offset="0.62" stop-color="#35a7ff"/>
+      <stop offset="1" stop-color="#9cfaff"/>
+    </linearGradient>
+
+    <linearGradient id="progressFillEmber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#35a7ff"/>
+      <stop offset="0.55" stop-color="#ffb98c"/>
+      <stop offset="1" stop-color="#ffd7a8"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="ambientBlur" x="-60%" y="-80%" width="220%" height="260%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+
+    <clipPath id="terminalClip">
+      <rect x="0" y="0" width="360" height="206" rx="8"/>
+    </clipPath>
+
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#88cfff" stroke-opacity="0.075" stroke-width="1"/>
+    </pattern>
+
+    <pattern id="fineGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="#9fe8ff" stroke-opacity="0.028" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- ============ BACKGROUND ============ -->
+  <g id="background">
+    <rect width="1200" height="300" fill="url(#bg)"/>
+    <rect width="1200" height="300" fill="url(#blueGlow)"/>
+    <rect width="1200" height="300" fill="url(#leftGlow)"/>
+    <rect width="1200" height="300" fill="url(#grid)"/>
+    <rect width="1200" height="300" fill="url(#fineGrid)"/>
+    <ellipse cx="948" cy="146" rx="230" ry="82" fill="#1aa7ff" opacity="0.18" filter="url(#ambientBlur)">
+      <animateTransform attributeName="transform" type="translate" values="-18 0;18 -8;-18 0" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.22;0.12" dur="9s" repeatCount="indefinite"/>
+    </ellipse>
+    <path d="M0 246C130 226 250 256 376 239C515 220 605 192 754 211C920 232 1037 260 1200 217V300H0Z" fill="#08192a" opacity="0.36"/>
+  </g>
+
+  <!-- ============ NETWORK TRACES ============ -->
+  <g id="network-pattern" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M36 44H150L192 68H560" stroke="#35a7ff" stroke-opacity="0.18" stroke-width="1.5"/>
+    <path d="M36 262H178L216 238H560" stroke="#48f5d2" stroke-opacity="0.18" stroke-width="1.5"/>
+    <path d="M928 46H1068L1110 88" stroke="#35a7ff" stroke-opacity="0.17" stroke-width="1.5"/>
+    <path d="M925 256H1032L1081 207H1140" stroke="#48f5d2" stroke-opacity="0.16" stroke-width="1.5"/>
+
+    <g fill="#9cfaff" stroke="none" filter="url(#softGlow)">
+      <circle r="3.4" opacity="0.82">
+        <animateMotion path="M36 44H150L192 68H560" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="3.4" opacity="0.74">
+        <animateMotion path="M560 238H216L178 262H36" dur="8s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <g fill="#9cfaff" stroke="none">
+      <circle cx="36" cy="44" r="3" opacity="0.58"/>
+      <circle cx="560" cy="68" r="2.8" opacity="0.5"/>
+      <circle cx="36" cy="262" r="3" opacity="0.45"/>
+      <circle cx="560" cy="238" r="2.8" opacity="0.48"/>
+      <circle cx="928" cy="46" r="2.8" opacity="0.42"/>
+      <circle cx="1110" cy="88" r="3.4" opacity="0.5"/>
+      <circle cx="1140" cy="207" r="3" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- ============ SHIELD + REGION RING (security over distributed infra) ============ -->
+  <g id="shield-motif" transform="translate(619 62)" opacity="0.62">
+    <!-- orbit ring: regions and zones circling the perimeter the shield covers -->
+    <g transform="rotate(-22 72 92)">
+      <ellipse cx="72" cy="92" rx="86" ry="46" fill="none" stroke="#ff9d6b" stroke-opacity="0.16" stroke-width="1.4"/>
+      <g fill="#ffb98c" opacity="0.5">
+        <circle cx="158" cy="92" r="2.6"/>
+        <circle cx="29" cy="132" r="2.6"/>
+        <circle cx="29" cy="52" r="2.6"/>
+      </g>
+      <circle r="3.2" fill="#ffd7a8" filter="url(#softGlow)" opacity="0.9">
+        <animateMotion dur="7s" repeatCount="indefinite"
+          path="M158 92A86 46 0 1 1 -14 92A86 46 0 1 1 158 92"/>
+      </circle>
+    </g>
+
+    <path d="M72 4L138 28V79C138 128 109 166 72 184C35 166 6 128 6 79V28Z"
+          fill="none" stroke="#35a7ff" stroke-opacity="0.22" stroke-width="2"/>
+    <path d="M72 4L138 28V79C138 128 109 166 72 184C35 166 6 128 6 79V28Z"
+          fill="none" stroke="url(#accent)" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" filter="url(#softGlow)">
+      <animate attributeName="stroke-dashoffset" values="1;0" dur="8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M72 36V152" stroke="#9fe8ff" stroke-opacity="0.16" stroke-width="1.4"/>
+    <path d="M38 84H106" stroke="#9fe8ff" stroke-opacity="0.13" stroke-width="1.4"/>
+  </g>
+
+  <!-- ============ LEFT COPY ============
+       Eyebrow, headline, name, and role line are the four text blocks below.
+  ========================================= -->
+  <g id="headline-copy" transform="translate(56 104)">
+    <!-- eyebrow -->
+    <g>
+      <rect x="0" y="-20" width="9" height="9" rx="2" fill="url(#accent)" opacity="0.9"/>
+      <text x="20" y="-12"
+            font-family="Consolas, 'Courier New', monospace"
+            font-size="13"
+            font-weight="700"
+            letter-spacing="2.4"
+            fill="#7fd8c6">SECURITY / CLOUD / AI</text>
+    </g>
+
+    <text x="0" y="30"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="44"
+          font-weight="700"
+          fill="url(#headline)">Welcome to my GitHub</text>
+
+    <text x="0" y="78"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="31"
+          font-weight="600"
+          fill="#e6f8ff">Shawn Thomas</text>
+
+    <text x="0" y="114"
+          font-family="Segoe UI, Arial, sans-serif"
+          font-size="20"
+          font-weight="500"
+          fill="#a9bed0">Product Management  |  Cybersecurity  |  Cloud Engineering</text>
+
+    <path d="M0 132H300" stroke="url(#accent)" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============ TERMINAL CARD ============ -->
+  <g id="terminal-card" transform="translate(795 48)">
+    <rect x="0" y="0" width="360" height="206" rx="8" fill="#050b14" stroke="#74dfff" stroke-opacity="0.28"/>
+    <rect x="1" y="1" width="358" height="204" rx="8" fill="none" stroke="#48f5d2" stroke-opacity="0.08"/>
+    <g clip-path="url(#terminalClip)">
+      <rect x="-78" y="0" width="78" height="206" fill="url(#terminalSweep)" opacity="0.7" transform="skewX(-16)">
+        <animate attributeName="x" values="-78;360" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <path d="M0 36H360" stroke="#74dfff" stroke-opacity="0.16"/>
+
+    <g id="terminal-controls">
+      <circle cx="20" cy="18" r="4.5" fill="#ff5f56" opacity="0.8"/>
+      <circle cx="37" cy="18" r="4.5" fill="#f5c451" opacity="0.86"/>
+      <circle cx="54" cy="18" r="4.5" fill="#48f5d2" opacity="0.86"/>
+      <text x="78" y="23"
+            font-family="Consolas, 'Courier New', monospace"
+            font-size="13"
+            fill="#6f879d">release-train</text>
+
+      <g id="status-badge" transform="translate(249 8)">
+        <rect x="0" y="0" width="96" height="20" rx="5" fill="#082235" stroke="#48f5d2" stroke-opacity="0.42"/>
+        <circle cx="12" cy="10" r="3" fill="#48f5d2">
+          <animate attributeName="opacity" values="0.45;1;0.45" dur="1.6s" repeatCount="indefinite"/>
+        </circle>
+        <text x="22" y="14"
+              font-family="Consolas, 'Courier New', monospace"
+              font-size="10.5"
+              font-weight="700"
+              fill="#c9fff2">In progress
+          <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.86;0.9;1" dur="8s" repeatCount="indefinite"/>
+        </text>
+        <text x="30" y="14"
+              font-family="Consolas, 'Courier New', monospace"
+              font-size="10.5"
+              font-weight="700"
+              fill="#ffd7a8"
+              opacity="0">SHIPPED
+          <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.86;0.9;0.97;1" dur="8s" repeatCount="indefinite"/>
+        </text>
+      </g>
+    </g>
+
+    <!-- ============ EDIT HERE: the four terminal lines ============ -->
+    <g id="terminal-lines"
+       font-family="Consolas, 'Courier New', monospace"
+       font-size="15.5"
+       font-weight="600">
+
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.03;0.08;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0;0 0;0 8" keyTimes="0;0.03;0.08;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <text x="26" y="62" fill="#48f5d2">&gt;</text>
+        <text x="50" y="62" fill="#d8fbff">Prioritizing backlog</text>
+      </g>
+
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.08;0.12;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <rect x="50" y="76" width="260" height="8" rx="4" fill="#0b2234" stroke="#74dfff" stroke-opacity="0.16"/>
+        <rect x="50" y="76" width="0" height="8" rx="4" fill="url(#progressFill)">
+          <animate attributeName="width" values="0;0;260;260;0" keyTimes="0;0.1;0.32;0.97;1" dur="8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.34;0.39;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0;0 0;0 8" keyTimes="0;0.34;0.39;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <text x="26" y="105" fill="#48f5d2">&gt;</text>
+        <text x="50" y="105" fill="#d8fbff">Threat model cleared</text>
+      </g>
+
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.43;0.48;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0;0 0;0 8" keyTimes="0;0.43;0.48;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <text x="26" y="129" fill="#ff9d6b">&gt;</text>
+        <text x="50" y="129" fill="#d8fbff">Least privilege enforced</text>
+      </g>
+
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.49;0.52;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <rect x="50" y="143" width="260" height="8" rx="4" fill="#0b2234" stroke="#74dfff" stroke-opacity="0.16"/>
+        <rect x="50" y="143" width="0" height="8" rx="4" fill="url(#progressFillEmber)">
+          <animate attributeName="width" values="0;0;260;260;0" keyTimes="0;0.5;0.76;0.97;1" dur="8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <g opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.77;0.82;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0;0 0;0 8" keyTimes="0;0.77;0.82;0.97;1" dur="8s" repeatCount="indefinite"/>
+        <text x="26" y="174" fill="#48f5d2">&gt;</text>
+        <text x="50" y="174" fill="#d8fbff">Shipped to production</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============ FRAME ACCENTS ============ -->
+  <g id="frame" fill="none" stroke-linecap="round">
+    <rect x="10" y="10" width="1180" height="280" rx="10" stroke="#9fe8ff" stroke-opacity="0.14"/>
+    <path d="M30 38V22H126" stroke="#48f5d2" stroke-opacity="0.44" stroke-width="2"/>
+    <path d="M1170 262V278H1074" stroke="#ff9d6b" stroke-opacity="0.38" stroke-width="2"/>
+  </g>
+</svg>
