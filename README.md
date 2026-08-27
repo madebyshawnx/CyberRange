@@ -1,2 +1,0 @@
-# CyberRange
-Cyber Projects 
